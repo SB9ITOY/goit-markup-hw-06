@@ -347,31 +347,28 @@ img {
     display: flex;
     align-items: center;
  }
- .custom-checkbox{
+ .custom-checkbox-icon{
     width: 16px;
     height: 15px;
     margin-right: 8px;
     display:flex;
     align-items: center;
     justify-content: center;
-
+    outline: 1px solid var(--primary-text-color);
     border-radius: 2px;
-    outline: 2px solid var(--primary-text-color);
-    outline-offset: -2px;
-    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- .checkbox:checked + .custom-checkbox{
-    background-color: var(--accent-color) ;
-    outline: none;
- }
- .custom-checkbox-icon{
-    opacity: 0;
+    fill: var(--whitecolor);
+    background-color: var(--whitecolor);
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .checkbox:checked + .custom-checkbox-icon {
-    opacity: 1;
+    background-color: var(--accent-color);
+    fill: var(--blackcolor);
+    outline: none;
  }
  .form-policy-desc{
     font-weight: 400;
